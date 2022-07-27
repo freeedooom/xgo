@@ -1,5 +1,9 @@
 package def
 
+import (
+	"time"
+)
+
 // time.layout
 const (
 	TimeLayoutDateTime    = "2006-01-02 15:04:05" // use a lot
@@ -9,3 +13,10 @@ const (
 	TimeLayoutGMTDateTime = "Mon, 02 Jan 2006 15:04:05 GMT" // RFC1123
 	TimeLayoutTime999     = "2006-01-02 15:04:05.999999999"
 )
+
+// time.zone
+const (
+	TimeZoneCN = "Asia/Shanghai"
+)
+
+var TimeLocationCN, _ = time.LoadLocation(TimeZoneCN)
